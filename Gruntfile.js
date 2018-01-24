@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     mochaTest: {
       options: {
         reporter: 'list',
-        require: ['should'],
+        require: ['should', 'should-sinon'],
         timeout: 3000
       },
       test: {
