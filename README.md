@@ -24,8 +24,60 @@ Alternatively, install [task-master](http://github.com/tandrewnichols/task-maste
 
 ### Overview
 
-In your project's Gruntfile, add a section named `nyc` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `nyc` to the data object passed into `grunt.initConfig()`. This task is a [simple-cli](https://github.com/tandrewnichols/simple-cli) task, so it can be configured in accordance with the examples there. A simple example is:
 
+```js
+grunt.initConfig({
+  nyc: {
+    cover: {
+      options: {
+        cwd: 'server',
+        include: ['lib/**', 'routes/**'],
+        exclude: '*.test.*',
+        reporter: ['lcov', 'text-summary'],
+        reportDir: 'server/coverage'
+        all: true
+      },
+      cmd: false,
+      args: ['grunt', 'mocha:unit']
+    }
+  },
+  report: {
+    options: {
+      reporter: 'text-summary'
+    }
+  }
+});
+
+// grunt nyc:cover will run
+// nyc --cwd server --include lib/** --include routes/** --exclude *.test.*
+//   --reporter--reporter--reporter--reporter lcov --reporter text-summary
+//   --report-dir server/coverage --all grunt mocha:unit
+//
+// whereas grunt nyc:report will run
+// nyc report --reporter text-summary
+```
+
+If you need to pass arguments to the process that runs your tests (`grunt mocha:unit` in the example above), you need to add them to `args` _after_ the command name (alternatively, you can add them in `rawArgs`). E.g.
+
+```js
+grunt.initConfig({
+  cover: {
+    cmd: false,
+    args: ['grunt', 'mocha:unit', '--require', 'should']
+  }
+});
+
+// or
+
+grunt.initConfig({
+  cover: {
+    cmd: false,
+    args: ['grunt', 'mocha:unit'],
+    rawArgs: ['--require', 'should']
+  }
+});
+```
 
 ## Contributing
 

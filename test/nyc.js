@@ -6,6 +6,6 @@ describe('nyc', () => {
   proxyquire('../tasks/nyc', { 'simple-cli': cli });
 
   it('should callthrough to simple cli', () => {
-    cli.should.have.been.calledWith('nyc');
+    cli.should.have.been.calledWith('nyc', { flags: 'before' });
   });
 });
