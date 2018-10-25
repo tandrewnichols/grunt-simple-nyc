@@ -40,11 +40,11 @@ grunt.initConfig({
       },
       cmd: false,
       args: ['grunt', 'mocha:unit']
-    }
-  },
-  report: {
-    options: {
-      reporter: 'text-summary'
+    },
+    report: {
+      options: {
+        reporter: 'text-summary'
+      }
     }
   }
 });
