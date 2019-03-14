@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/tandrewnichols/grunt-simple-nyc",
   "dependencies": {
-    "nyc": "^11.4.1",
+    "nyc": "^13.3.0",
     "simple-cli": "^5.0.0"
   },
   "devDependencies": {
