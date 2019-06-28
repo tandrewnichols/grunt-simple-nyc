@@ -6,7 +6,7 @@
   "scripts": {
     "test": "grunt",
     "travis": "grunt travis",
-    "codeclimate": "codeclimate-test-reporter < coverage/lcov.info"
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=3626b5b37539510f57d2b25ff1535a70058207d57a18371a1b45a66a2d73a86b codeclimate-test-reporter < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
