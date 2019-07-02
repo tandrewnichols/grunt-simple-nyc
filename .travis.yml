@@ -1,8 +1,5 @@
 language: node_js
 sudo: false
-addons:
-  code_climate:
-    repo_token: '3626b5b37539510f57d2b25ff1535a70058207d57a18371a1b45a66a2d73a86b'
 install:
   - "npm install"
 script:
