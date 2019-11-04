@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/tandrewnichols/grunt-simple-nyc",
   "dependencies": {
+    "lodash": "^4.17.15",
     "nyc": "^14.1.0",
     "simple-cli": "^5.0.3"
   },
