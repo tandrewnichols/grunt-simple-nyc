@@ -1,7 +1,7 @@
 {
   "name": "grunt-simple-nyc",
   "description": "A grunt wrapper for nyc",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "tasks/nyc.js",
   "scripts": {
     "test": "grunt",
